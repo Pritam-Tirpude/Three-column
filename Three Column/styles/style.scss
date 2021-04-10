@@ -1,0 +1,34 @@
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$paragraph: hsla(0, 0%, 100%, 0.75);
+$headerSize: 2.5rem;
+$paraSize: 1rem;
+$buttonSize: 1rem;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "cards";
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    @include flex(center, center, column);
+  }
+
+  .sedans {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0rem;
+  }
+
+  .luxury {
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0rem;
+  }
+}
